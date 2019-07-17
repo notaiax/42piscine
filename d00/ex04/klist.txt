@@ -1,0 +1,5 @@
+Credentials cache: API:46468
+        Principal: afaura-v@42.US.ORG
+
+  Issued                Expires               Principal
+Jul  9 10:27:30 2019  Jul  9 20:27:30 2019  krbtgt/42.US.ORG@42.US.ORG
