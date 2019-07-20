@@ -6,7 +6,7 @@
 /*   By: afaura-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 22:47:52 by afaura-v          #+#    #+#             */
-/*   Updated: 2019/07/19 16:20:17 by afaura-v         ###   ########.fr       */
+/*   Updated: 2019/07/19 17:06:02 by afaura-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,6 @@ char	**ft_split_whitespaces(char *str)
 		words[c][r] = '\0';
 		c++;
 	}
-	words[c][0] = 0;
+	words[c] = 0;
 	return (words);
 }
