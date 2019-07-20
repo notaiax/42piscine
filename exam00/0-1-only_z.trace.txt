@@ -1,0 +1,49 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r9p26.42.us.org
+Darwin 17.7.0 x86_64
+$> date
+Fri Jul 12 18:24:18 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam00/exam_20190713/afaura-v
+
+= Git history ==================================================================
+$> git -C /var/folders/7x/bl3k0nnx0j77rgjmd337gnm40000gp/T/tmpEhUhuN/user log --pretty='%H - %an, %ad : %s'
+263444f2d441c2c43e7509de63e02f78203078da - Exam 42, Fri Jul 12 18:23:47 2019 -0700 : only z
+8e8014db3ffefadb7820c87d338eef9ec9f35d00 - Exam 42, Fri Jul 12 18:18:53 2019 -0700 : only a corrected
+f5a3ee6e3cda0c68d87da60580ac94b39c8fff4b - Exam 42, Fri Jul 12 18:17:14 2019 -0700 : Only a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/7x/bl3k0nnx0j77rgjmd337gnm40000gp/T/tmpEhUhuN/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  655 Jul 12 18:24 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 12 18:24 only_z
+
+/var/folders/7x/bl3k0nnx0j77rgjmd337gnm40000gp/T/tmpEhUhuN/user/only_z:
+total 8
+-rw-r--r--  1 deepthought  deepthought  983 Jul 12 18:24 only_z.c
+ 
+= only_z =======================================================================
+$> gcc -Wextra -Wall -Werror only_z.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./c5223s72s9sqro2y2crnjk98 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

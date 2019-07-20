@@ -1,0 +1,106 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r8p5.42.us.org
+Darwin 17.7.0 x86_64
+$> date
+Fri Jul 12 19:50:22 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam00/exam_20190713/afaura-v
+
+= Git history ==================================================================
+$> git -C /var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user log --pretty='%H - %an, %ad : %s'
+33a941f3a5e331352ce9584088e68ed6dce5f098 - Exam 42, Fri Jul 12 19:49:44 2019 -0700 : atoi
+d10788d11083a80b51130d0e287d868d7d3d81f3 - Exam 42, Fri Jul 12 19:14:58 2019 -0700 : swap
+5882131cb7ac97b0c827e3bf59bb77b6087efbe6 - Exam 42, Fri Jul 12 19:07:47 2019 -0700 : maff-revalpha
+0fb745df3e723fcb41d52d3d41f75cf67e8c9f38 - Exam 42, Fri Jul 12 18:33:46 2019 -0700 : countdown
+263444f2d441c2c43e7509de63e02f78203078da - Exam 42, Fri Jul 12 18:23:47 2019 -0700 : only z
+8e8014db3ffefadb7820c87d338eef9ec9f35d00 - Exam 42, Fri Jul 12 18:18:53 2019 -0700 : only a corrected
+f5a3ee6e3cda0c68d87da60580ac94b39c8fff4b - Exam 42, Fri Jul 12 18:17:14 2019 -0700 : Only a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1647 Jul 12 19:50 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Jul 12 19:50 ft_atoi
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:50 ft_countdown
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:50 ft_swap
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:50 maff_revalpha
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:50 only_z
+
+/var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user/ft_atoi:
+total 32
+-rw-r--r--  1 deepthought  deepthought  12288 Jul 12 19:50 .main.c.swp
+-rw-r--r--  1 deepthought  deepthought   1255 Jul 12 19:50 ft_atoi.c
+
+/var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user/ft_countdown:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1070 Jul 12 19:50 ft_countdown.c
+
+/var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  969 Jul 12 19:50 ft_swap.c
+
+/var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user/maff_revalpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1166 Jul 12 19:50 maff_revalpha.c
+
+/var/folders/6j/310hspb962vg0dm32lh8_mp40000gp/T/tmpkwVh4G/user/only_z:
+total 8
+-rw-r--r--  1 deepthought  deepthought  983 Jul 12 19:50 only_z.c
+ 
+= ft_atoi ======================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_atoi.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./tz4dbzkxckmaoidkqu8qhici 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./fzfevkpj6e00nopfy6gppaqe "21" "2313"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./zrgt7vnsdl8fsd2b9spixn0n 2147483647
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./ixm3tlxkulk5hsiw5vjde43d -2147483648
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./cb29hcbq6e24wnmw26q3s2kl 0
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./ew6o95m8p1jvw87xtdlk9vzj 12211t11
+$> diff -U 3 user_output_test6 test6.output | cat -e
+--- user_output_test6	2019-07-12 19:50:25.000000000 -0700$
++++ test6.output	2019-07-12 19:50:25.000000000 -0700$
+@@ -1 +1 @@$
+-12217811$
+\ No newline at end of file$
++12211$
+\ No newline at end of file$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

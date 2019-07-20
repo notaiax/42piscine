@@ -1,0 +1,61 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z1r6p11.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Fri Jul 12 19:08:24 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam00/exam_20190713/afaura-v
+
+= Git history ==================================================================
+$> git -C /var/folders/92/1hxr5fxx6cx0kjdkn3p2l7qh0000gp/T/tmpaw145c/user log --pretty='%H - %an, %ad : %s'
+5882131cb7ac97b0c827e3bf59bb77b6087efbe6 - Exam 42, Fri Jul 12 19:07:47 2019 -0700 : maff-revalpha
+0fb745df3e723fcb41d52d3d41f75cf67e8c9f38 - Exam 42, Fri Jul 12 18:33:46 2019 -0700 : countdown
+263444f2d441c2c43e7509de63e02f78203078da - Exam 42, Fri Jul 12 18:23:47 2019 -0700 : only z
+8e8014db3ffefadb7820c87d338eef9ec9f35d00 - Exam 42, Fri Jul 12 18:18:53 2019 -0700 : only a corrected
+f5a3ee6e3cda0c68d87da60580ac94b39c8fff4b - Exam 42, Fri Jul 12 18:17:14 2019 -0700 : Only a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/92/1hxr5fxx6cx0kjdkn3p2l7qh0000gp/T/tmpaw145c/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1146 Jul 12 19:08 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:08 ft_countdown
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:08 maff_revalpha
+drwxr-xr-x  3 deepthought  deepthought   102 Jul 12 19:08 only_z
+
+/var/folders/92/1hxr5fxx6cx0kjdkn3p2l7qh0000gp/T/tmpaw145c/user/ft_countdown:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1070 Jul 12 19:08 ft_countdown.c
+
+/var/folders/92/1hxr5fxx6cx0kjdkn3p2l7qh0000gp/T/tmpaw145c/user/maff_revalpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1166 Jul 12 19:08 maff_revalpha.c
+
+/var/folders/92/1hxr5fxx6cx0kjdkn3p2l7qh0000gp/T/tmpaw145c/user/only_z:
+total 8
+-rw-r--r--  1 deepthought  deepthought  983 Jul 12 19:08 only_z.c
+ 
+= maff_revalpha ================================================================
+$> gcc -Wextra -Wall -Werror maff_revalpha.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./uaysurzyty5xw9t5wys3027i
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

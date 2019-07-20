@@ -1,0 +1,38 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r8p13.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Fri Jul 12 18:19:33 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam00/exam_20190713/afaura-v
+
+= Git history ==================================================================
+$> git -C /var/folders/jm/fz_jy1dj0456qnppwswjg0tw0000gp/T/tmp9LF7Tg/user log --pretty='%H - %an, %ad : %s'
+8e8014db3ffefadb7820c87d338eef9ec9f35d00 - Exam 42, Fri Jul 12 18:18:53 2019 -0700 : only a corrected
+f5a3ee6e3cda0c68d87da60580ac94b39c8fff4b - Exam 42, Fri Jul 12 18:17:14 2019 -0700 : Only a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/jm/fz_jy1dj0456qnppwswjg0tw0000gp/T/tmp9LF7Tg/user
+total 16
+-rw-r--r--  1 deepthought  deepthought  429 Jul 12 18:19 __GIT_HISTORY
+-rw-r--r--  1 deepthought  deepthought  983 Jul 12 18:19 only_a.c
+ 
+= only_a =======================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

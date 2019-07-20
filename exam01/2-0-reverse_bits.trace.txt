@@ -1,0 +1,60 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r3p22.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Fri Jul 19 20:49:06 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam01/exam_20190720/afaura-v
+
+= Git history ==================================================================
+$> git -C /var/folders/wj/2mbppcl95gv5t7cssvgwrwp00000gp/T/tmptvit_m/user log --pretty='%H - %an, %ad : %s'
+2dc158014236a4c00fa724c790f529076a8eaef9 - Exam 42, Fri Jul 19 20:47:30 2019 -0700 : reverse-bits
+876fc6dce28aef810b5b2d59c656ec33aa5c7069 - Exam 42, Fri Jul 19 18:49:12 2019 -0700 : repeat_alpha
+bff9c2959048565290e08e15e2ed4535e060a540 - Exam 42, Fri Jul 19 18:24:38 2019 -0700 : aff_a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/wj/2mbppcl95gv5t7cssvgwrwp00000gp/T/tmptvit_m/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  801 Jul 19 20:49 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 19 20:49 aff_a
+drwxr-xr-x  3 deepthought  deepthought  102 Jul 19 20:49 repeat_alpha
+drwxr-xr-x  4 deepthought  deepthought  136 Jul 19 20:49 reverse_bits
+
+/var/folders/wj/2mbppcl95gv5t7cssvgwrwp00000gp/T/tmptvit_m/user/aff_a:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1212 Jul 19 20:49 aff_a.c
+
+/var/folders/wj/2mbppcl95gv5t7cssvgwrwp00000gp/T/tmptvit_m/user/repeat_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1391 Jul 19 20:49 repeat_alpha.c
+
+/var/folders/wj/2mbppcl95gv5t7cssvgwrwp00000gp/T/tmptvit_m/user/reverse_bits:
+total 32
+-rw-r--r--  1 deepthought  deepthought  12288 Jul 19 20:49 .test.c.swp
+-rw-r--r--  1 deepthought  deepthought   1375 Jul 19 20:49 reverse_bits.c
+ 
+= reverse_bits =================================================================
+$> gcc -Wextra -Wall -Werror main.c reverse_bits.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./6pymc67ejriij5hnb0k0fw9b
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
