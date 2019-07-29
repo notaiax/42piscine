@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# Store their results
+if [ ! -t 0 ]
+then
+	THEIRS=$(cat)
+else
+	THEIRS=""
+fi
+
+# Write theirs to a text file
+echo "$THEIRS" > theirs.txt
+
+# Which c programs to execute
+RUSH="rush0"
+NUM=0
+
+# Whether we have already found a match
+MATCHED=0
+	
+# Get the width and height of their output
+if [ "$THEIRS" == "" ]
+then
+	NUM=999
+else
+	WIDTH=$( echo "$THEIRS" | tr '\n' ' ' | cut -d ' ' -f 1 | wc -c | awk '{ print $1 " - 1" }' | bc )
+	HEIGHT=$( echo "$THEIRS" | wc -l | tr -d ' ' )
+fi
+
+# Iterate through each rush
+while [ $NUM -le 4 ]
+do
+
+	# Get the output of our rush script
+	OURS=$(./$RUSH$NUM $WIDTH $HEIGHT > ours.txt)
+
+	# If the two are identical, print it with proper formatting
+	if cmp -s ours.txt theirs.txt;
+	then
+		if [ $MATCHED == 0 ]
+		then
+			printf "[colle-0$NUM] [$WIDTH] [$HEIGHT]" 
+			MATCHED=$(($MATCHED+1))
+		else
+			printf " || [colle-0$NUM] [$WIDTH] [$HEIGHT]"
+		fi
+	fi
+
+	# Add one to our number
+	NUM=$(($NUM+1))
+done
+
+if [ $MATCHED == 0 ]
+then
+	printf "aucune"
+fi
+# Remove the text files
+rm -f ours.txt theirs.txt
+
+# Finish the job with ye ole newline
+printf "\n"
