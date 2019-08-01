@@ -6,7 +6,7 @@
 /*   By: afaura-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 18:07:49 by afaura-v          #+#    #+#             */
-/*   Updated: 2019/07/31 21:56:29 by migriver         ###   ########.fr       */
+/*   Updated: 2019/07/31 23:33:10 by migriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ t_map_info		bsq_parse(char **input);
 void			bsq_print_square(char *map, t_box *biggest, t_map_info *mi);
 char			*bsq_read_file(char *filename);
 char			*bsq_read_file_error(char *value, char *filename, char *str);
+char			*bsq_read_from_stdin(void);
 int				bsq_xytoi(int x, int y, int columns);
 
 #endif
